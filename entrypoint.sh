@@ -43,6 +43,7 @@ COMMAND="autossh "\
 "-o ServerAliveInterval=${SERVER_ALIVE_INTERVAL:-10} "\
 "-o ServerAliveCountMax=${SERVER_ALIVE_COUNT_MAX:-3} "\
 "-o ExitOnForwardFailure=yes "\
+"${SSH_OPTIONS:=}" \
 "-t -t "\
 "${SSH_MODE:=-R} ${SSH_TUNNEL_REMOTE}:${SSH_TUNNEL_HOST}:${SSH_TUNNEL_LOCAL} "\
 "-p ${SSH_HOSTPORT:=22} "\
